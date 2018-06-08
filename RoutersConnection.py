@@ -1,8 +1,6 @@
 import numpy as np
 import networkx as nx
 
-import ctypes, ctypes.util
-
 def dijkstra(matrix, m, n):
     xyz = int(input("Enter the source vertex"))
     cost = [[0 for x in range(m)] for x in range(1)]
@@ -43,17 +41,20 @@ G=nx.Graph()
 ##poniewaz w przeciwnym razie by wykonywalo do liczby routerow-1
 for router in range(1, number_of_routers + 1):
     routers.append(router)
-    G.add_node(router)
     bandwidth = int(input("Bandwidth for %d router(mb/s): " % router))
-    bandwidths.append(bandwidth)
-    if (bandwidth <= 0):  ##jesli przepustowosc jest falszywa, konczymy program
+    if (bandwidth>0):
+        bandwidths.append(bandwidth)
+    elif (bandwidth == 0):
+        ##wstawiamy duza liczbe,aby program nie bral tego pod uwage przy wyborze najkrotszej sciezki. W przeciwnym razie byloby
+        ## mnozenie razy 0, co daloby niska wage sciezki i prowadzilo do niedzialajacego routera
+        bandwidths.append(1000000000000000000000000)
+    else: ##gdy wstawi sie ujemna wage, wyrzucamy blad
         raise ValueError ("False parameters of bandwidth")
 print("routers: ", routers)
 print("bandwidths: ",bandwidths)
 
 for station in range(1, number_of_stations + 1):
     stations.append(1) ##1, aby nie falszowac wyniku w dalszej czesci programu
-    G.add_node(station)
 print("stations: ",stations)
 
 ##wszystkie mozliwosci przepustowosci dla stanowisk wynikajace z regul prawdopodobienstwa
@@ -62,34 +63,31 @@ bandwidth_for_station = [bandwidth * station for bandwidth in bandwidths for sta
 for i in range (len(bandwidth_for_station)):
     distance = int(input("Distance %d is(m): " % (i + 1)))
     T = int(input("Time(s) %d is: " % (i + 1)))
-    if (T>0 and distance>0):
+    if (T>0 and distance>0): ##taka sama kombinacja jak przy bandwidth
         distances.append(distance)
         Times.append(T)
-    else:
+    elif (T==0 and distance==0):
        print("Distance/Time cannot be equal 0. Your router is broken probably :(")
-       ##wstawiamy duza liczbe,aby program nie bral tego pod uwage przy wyborze najkrotszej sciezki
-       ##POMYSLEC Z TYM ATOI, JAK STARCZY MI CZASU!
-       str(distances.append(100000000000000000))
-       str(Times.append(1000000000000000000000))
+       distances.append(100000000000000000000)
+       Times.append(1000000000000000000000000)
+    else:
+        raise ValueError("False parameters")
 ##umowna waga,ktora bierze pod uwage wszystkie czynniki
-matrix = [[0 for x in range(number_of_stations)] for x in range(number_of_routers)]
+##matrix = [[0 for x in range(number_of_stations)] for x in range(number_of_routers)]
 weight= [bandwidth_for_station[k]*distances[k]*Times[k] for k in range(len(bandwidth_for_station))]
-for i in range (len(weight)):
-    G.add_weighted_edges_from(stations[i],routers[i],weight[i])
-for i in range(number_of_routers):
-    for j in range(number_of_stations):
-        for weights in weight:
-            matrix[i][j]=weight.get(weights)
-            break
+matrix=[[w for w in weight[i:i+number_of_routers]] for i in range(number_of_stations)]
+##for i in range (len(weight)):
+  ##  G.add_weighted_edges_from(stations[i],routers[i],weight[i])
+H=nx.path_graph(number_of_routers+number_of_stations)
+G.add_nodes_from(H)
+
 
 Weight_in_matr=np.mat(weight)
-final_matrix=Weight_in_matr.reshape((len(stations)),(len(routers)))
-print("bandwidths (final): ", bandwidth_for_station) ##ostateczna macierz, ktora bedzie poddana alg. Dijkstry
+final_matrix=Weight_in_matr.reshape((len(routers)),(len(stations)))
+print("bandwidths (final): ", bandwidth_for_station)
 print("Distances: ",distances)
 print("Times: ",Times)
-print("Weight: ",weight)
-print("Weight: ",matrix)
 print("Final matrix:\n", final_matrix)
+print("Graph: ", G.nodes())
 
-
-##dijkstra(final_matrix,number_of_stations,number_of_routers)
+dijkstra(matrix,number_of_routers,number_of_stations)

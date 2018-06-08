@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33fd03d1-2490-465a-a18a-12ce0cf5e835" name="Default" comment="" />
+    <list default="true" id="33fd03d1-2490-465a-a18a-12ce0cf5e835" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/master" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RoutersConnection.py" beforeDir="false" afterPath="$PROJECT_DIR$/RoutersConnection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorytrm dijstry/In0205_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorytrm dijstry/Out0205.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorytrm dijstry/T2Zad5.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorytrm dijstry/T2Zad5.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorytrm dijstry/T2Zad5.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/HEAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/RoutersConnection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/description" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/hooks/applypatch-msg.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/hooks/commit-msg.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/hooks/fsmonitor-watchman.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/hooks/post-update.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/hooks/pre-applypatch.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/hooks/pre-commit.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/hooks/pre-push.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/hooks/pre-rebase.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/hooks/pre-receive.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/hooks/prepare-commit-msg.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/hooks/update.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repo/info/exclude" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +40,8 @@
       <file leaf-file-name="RoutersConnection.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RoutersConnection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+            <state relative-caret-position="155">
+              <caret line="80" column="53" selection-start-line="80" selection-start-column="53" selection-end-line="80" selection-end-column="53" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -24,10 +50,10 @@
         </entry>
       </file>
       <file leaf-file-name="AlgDijkstra.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AlgDijkstra.py">
+        <entry file="file://$PROJECT_DIR$/../AlgDijkstra.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="54" />
+            <state>
+              <caret column="25" selection-start-column="25" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -41,8 +67,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="ONTO" value="refs/remotes/origin/master" />
+  </component>
   <component name="Git.Settings">
-    <option name="PATH_TO_GIT" value="E:\Git\bin" />
+    <option name="PATH_TO_GIT" value="E:\Git\cmd\git.exe" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -66,6 +95,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -82,11 +112,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/repo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AlgDijkstra.py" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -107,6 +136,24 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.RoutersConnection">
+    <configuration name="AlgDijkstra (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Projekt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../AlgDijkstra.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="AlgDijkstra" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Projekt" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -146,10 +193,12 @@
     <list>
       <item itemvalue="Python.RoutersConnection" />
       <item itemvalue="Python.AlgDijkstra" />
+      <item itemvalue="Python.AlgDijkstra (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.RoutersConnection" />
+        <item itemvalue="Python.AlgDijkstra (1)" />
         <item itemvalue="Python.AlgDijkstra" />
       </list>
     </recent_temporary>
@@ -172,10 +221,10 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963924" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5036075" side_tool="true" visible="true" weight="0.32880846" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32880846" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4963925" visible="true" weight="0.32880846" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -195,6 +244,33 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/RoutersConnection.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" column="53" selection-start-line="80" selection-start-column="53" selection-end-line="80" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AlgDijkstra.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoutersConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="77" column="63" selection-start-line="77" selection-start-column="63" selection-end-line="77" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoutersConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1241">
           <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
           <folding>
@@ -203,13 +279,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AlgDijkstra.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/AlgDijkstra.py" />
     <entry file="file://$PROJECT_DIR$/RoutersConnection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -220,17 +290,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AlgDijkstra.py">
+    <entry file="file://$PROJECT_DIR$/AlgDijkstra.py" />
+    <entry file="file://$PROJECT_DIR$/../AlgDijkstra.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="54" />
+        <state>
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RoutersConnection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+        <state relative-caret-position="155">
+          <caret line="80" column="53" selection-start-line="80" selection-start-column="53" selection-end-line="80" selection-end-column="53" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
