@@ -1,5 +1,5 @@
 import numpy as np
-import networkx as nx
+import csv
 
 def dijkstra(matrix, m, n):
     xyz = int(input("Enter the source vertex"))
@@ -23,10 +23,11 @@ def dijkstra(matrix, m, n):
     print("The shortest path", offsets)
     print("The cost to various vertices in order", cost)
 
+# Podanie ilosci routerow i stacji
 number_of_routers=int(input("Enter number of routers: "))
 number_of_stations=int(input("Enter number of stations: "))
 
-##sprawdzamy,czy parametry sa ok
+# sprawdzamy,czy parametry sa ok
 if (number_of_routers <= 0 or number_of_stations <= 0):
     raise ValueError("False parameters")
 
@@ -35,7 +36,7 @@ bandwidths = []  ##lista z przepustowosciami
 stations = []  ##lista ze stacjami
 distances = [] ##lista z odleglosciami
 Times = [] ##lista z czasami polaczenia z routerem
-G=nx.Graph()
+
 
 ##przypisujemy przepustowosc dla routerow. Zaczynamy od 1, poniewaz musi byc co najmniej 1 router. Do liczby routerow jest dodane 1,
 ##poniewaz w przeciwnym razie by wykonywalo do liczby routerow-1
@@ -71,23 +72,30 @@ for i in range (len(bandwidth_for_station)):
        distances.append(100000000000000000000)
        Times.append(1000000000000000000000000)
     else:
-        raise ValueError("False parameters")
+        raise ValueError("False parameters") # blad o zlych parametrach
+
 ##umowna waga,ktora bierze pod uwage wszystkie czynniki
-##matrix = [[0 for x in range(number_of_stations)] for x in range(number_of_routers)]
 weight= [bandwidth_for_station[k]*distances[k]*Times[k] for k in range(len(bandwidth_for_station))]
 matrix=[[w for w in weight[i:i+number_of_routers]] for i in range(number_of_stations)]
-##for i in range (len(weight)):
-  ##  G.add_weighted_edges_from(stations[i],routers[i],weight[i])
-H=nx.path_graph(number_of_routers+number_of_stations)
-G.add_nodes_from(H)
-
-
 Weight_in_matr=np.mat(weight)
 final_matrix=Weight_in_matr.reshape((len(routers)),(len(stations)))
+
+
 print("bandwidths (final): ", bandwidth_for_station)
 print("Distances: ",distances)
 print("Times: ",Times)
 print("Final matrix:\n", final_matrix)
-print("Graph: ", G.nodes())
+
 
 dijkstra(matrix,number_of_routers,number_of_stations)
+filename = "plik.txt"
+
+
+print("Output file: {}".format(filename))
+
+with open(filename, "w") as output:
+    writer = csv.writer(output, lineterminator='\n')
+    writer.writerow('%' + ''.join([str(x) for x in stations]))
+    # import pdb; pdb.set_trace() # debugger
+    for val in final_matrix:
+       writer.writerow(val)
