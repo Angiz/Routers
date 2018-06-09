@@ -1,11 +1,16 @@
 # Routers
 # PL
+# Projekt wykonany na zaliczenie przedmiotu Sztuczna Inteligencja
 
 Biblioteki/narzędzia niezbędne do uruchomienia programu:
 - środowisko Python 3.x
 - pip
 - biblioteka NumPy
 - biblioteka csv do eksportu pliku
+
+Instrukcja instalacji bibliotek:
+Środowisko Pythona można pobrać z następującej strony: https://www.python.org/downloads/. 
+Najwygodniejszą wersją do odtwarzania programu jest instalacja programu PyCharm: https://www.jetbrains.com/pycharm/download/#section=windows. Wersja Community jest darmowa.Otwieramy plik RoutersConnection.py. Po wejściu w ustawienia (Settings), wybieramy opcję Project:<nazwa projektu> -> Project Interpreter. Wyświetla nam się lista z zainstalowanymi bibliotekami. W celu dodania powyższych bibliotek, klikamy znaczek "+" i wyszukujemy instalujące nas biblioteki. Istnieje również instalacja przez konsolę, jednak jest ona bardziej skomplikowana, dlatego zaleca się 1-szą opcję. Projekt uruchamiamy poprzez przycisk "Run".
 
 Zasada działania programu:
 Program pobiera od użytkownika liczbę routerów oraz liczbę stacji. Jeśli użytkownik poda nieprawidłowe parametry, program wyrzuca błąd. 
