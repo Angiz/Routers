@@ -1,6 +1,8 @@
 import numpy as np
 import csv
 
+
+# Funkcja nie jest przeze mnie stworzona, pobrana z https://gist.github.com/shintoishere/f0fa40fe1134b20e7729
 def dijkstra(matrix, m, n):
     xyz = int(input("Enter the source vertex"))
     cost = [[0 for x in range(m)] for x in range(1)]
